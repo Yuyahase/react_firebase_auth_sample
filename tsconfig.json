@@ -1,26 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    // どのパージョンのJavaScriptむけにコンパイル出力するか
+    // あえて古いコードで動かしている、または古いNode.jsを使っているといった事情がなければ最新に近い物を指定することは問題ありません。
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    // Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files. For example, this JS file:
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    // 大文字小文字を区別して参照を解決するようにします。
     "forceConsistentCasingInFileNames": true,
+    // Ensures that any non-empty case inside a switch statement includes either break or return.
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    // Specify the module resolution strategy: 'node' (Node.js) or 'classic' (used in TypeScript before the release of 1.6). You probably won’t need to use classic in modern code.
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    // コンパイルはせずに型チェックの行う
     "noEmit": true,
+    // Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files.
     "jsx": "react-jsx"
   },
+  // コンパイル対象のファイルを記述する
+  // ワイルドカード（*,?,**/）が使える。
   "include": [
-    "src"
+    "src/**/*"
   ]
 }

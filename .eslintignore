@@ -1,0 +1,8 @@
+# eslintで一部のファイルのみバリデートから除外したい場合は、.eslintignoreファイルを作成する
+# 外部ライブラリ、他人が書いた手がつけられないファイル
+build/
+public/
+**/node_modules/
+*.config.js
+.*lintrc.jsyarn
+/.eslintrc.js
