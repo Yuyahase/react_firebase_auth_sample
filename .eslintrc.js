@@ -1,5 +1,5 @@
 // ESLint は JavaScript のための静的検証ツール
-//js, YAML, JSON形式で記述できる
+// js, YAML, JSON形式で記述できる
 module.exports = {
   env: {
     browser: true,
