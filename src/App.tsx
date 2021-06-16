@@ -1,24 +1,31 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
-const App: React.FunctionComponent = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
-  </div>
+// screens
+import SignInOrUp from './screens/SignInOrUp';
+
+// Functional Componentのスタイルで書くのが基本
+const App: React.FC = () => (
+  <Router>
+    {/*
+      Switch：
+      上から順にURLとpathを比較し、一致するルート内容を返す
+
+    */}
+    <Switch>
+      {/* 
+      exactをつけることでpathに指定したlocation.pathNameが完全に一致した時のみ
+      コンポーネトを返すようになる
+       */}
+      {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+      <Route exact path="/signin" component={SignInOrUp} />
+    </Switch>
+  </Router>
 );
 
 export default App;
