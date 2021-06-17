@@ -1,0 +1,7 @@
+{
+    "cSpell.words": [
+        "Formik",
+        "browserslist"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
+}

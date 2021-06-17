@@ -1,13 +1,9 @@
 import React from "react";
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // screens
-import SignInOrUp from './screens/SignInOrUp';
+import SignIn from "./views/pages/signin";
 
 // Functional Componentのスタイルで書くのが基本
 const App: React.FC = () => (
@@ -22,7 +18,7 @@ const App: React.FC = () => (
       コンポーネトを返すようになる
        */}
       {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
-      <Route exact path="/signin" component={SignInOrUp} />
+      <Route exact path="/signin" component={SignIn} />
     </Switch>
   </Router>
 );
