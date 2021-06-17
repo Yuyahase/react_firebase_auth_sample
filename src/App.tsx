@@ -15,7 +15,6 @@ const App: React.FC = () => (
     {/*
       Switch：
       上から順にURLとpathを比較し、一致するルート内容を返す
-
     */}
     <Switch>
       {/* 
